@@ -1,5 +1,5 @@
 //setInterval(mode, 1000);
+setTimeout(mode, 30000);
 function mode() {
-    var canvas = document.getElementsByTagName('canvas')[0];
-    canvas.requestFullscreen();
+    document.getElementById('game_frame1').id = 'game_frame';
 }
