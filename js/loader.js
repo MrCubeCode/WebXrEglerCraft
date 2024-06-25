@@ -91,7 +91,7 @@
     }
 
     function loadClientFile(arrayBuffer) {
-        null != progressPanel && (progressPanel.remove(), progressPanel = null);
+        //null != progressPanel && (progressPanel.remove(), progressPanel = null);
         var objURL = URL.createObjectURL(new Blob([arrayBuffer], {
                 type: "text/javascript;charset=utf-8"
             })),
