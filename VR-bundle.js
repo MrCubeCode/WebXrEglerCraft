@@ -18319,17 +18319,21 @@ var CanvasRenderingContext2D = class extends Component {
   start() {
     setTimeout(starter, 6e4);
     function starter() {
-      const canvas2 = document.getElementsByTagName("canvas")[0];
-      canvas2.width = 300;
-      canvas2.height = 300;
-      const ctx = canvas2.getContext("2d");
-      this.canvasTexture = new Texture(this.engine, canvas2);
-      this.material.diffuseTexture = this.canvasTexture;
-      this.canvasTexture.update();
+      if (document.getElementsByTagName("canvas") != null) {
+        const canvas2 = document.getElementsByTagName("canvas")[0];
+        canvas2.width = 300;
+        canvas2.height = 300;
+        const ctx = canvas2.getContext("2d");
+        this.canvasTexture = new Texture(this.engine, canvas2);
+        this.material.diffuseTexture = this.canvasTexture;
+        this.canvasTexture.update();
+      }
       setInterval(updater, 100);
     }
     function updater() {
-      canvas = document.getElementsByTagName("canvas")[0];
+      if (document.getElementsByTagName("canvas") != null) {
+        canvas = document.getElementsByTagName("canvas")[0];
+      }
       this.canvasTexture.update();
     }
   }
