@@ -18326,15 +18326,17 @@ var CanvasRenderingContext2D = class extends Component {
         const ctx = canvas2.getContext("2d");
         this.canvasTexture = new Texture(this.engine, canvas2);
         this.material.diffuseTexture = this.canvasTexture;
+        setInterval(updater, 100);
         this.canvasTexture.update();
+      } else {
+        setTimeout(starter, 1e3);
       }
-      setInterval(updater, 100);
     }
     function updater() {
       if (document.getElementsByTagName("canvas") != null) {
         canvas = document.getElementsByTagName("canvas")[0];
+        this.canvasTexture.update();
       }
-      this.canvasTexture.update();
     }
   }
 };
