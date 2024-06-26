@@ -18333,8 +18333,6 @@ var CanvasRenderingContext2D = class extends Component {
       this.canvasTexture.update();
     }
   }
-  update() {
-  }
 };
 __publicField(CanvasRenderingContext2D, "TypeName", "CanvasRenderingContext2D");
 __publicField(CanvasRenderingContext2D, "Properties", {
