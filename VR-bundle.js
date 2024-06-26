@@ -18317,7 +18317,7 @@ __decorate12([
 // js/CanvasRenderingContext2D.js
 var CanvasRenderingContext2D = class extends Component {
   start() {
-    setTimeout(starter, 1e3);
+    setTimeout(starter, 6e4);
     function starter() {
       const canvas2 = document.getElementsByTagName("canvas")[0];
       canvas2.width = 300;
@@ -18326,8 +18326,8 @@ var CanvasRenderingContext2D = class extends Component {
       this.canvasTexture = new Texture(this.engine, canvas2);
       this.material.diffuseTexture = this.canvasTexture;
       this.canvasTexture.update();
+      setInterval(updater, 100);
     }
-    setInterval(updater, 100);
     function updater() {
       canvas = document.getElementsByTagName("canvas")[0];
       this.canvasTexture.update();
