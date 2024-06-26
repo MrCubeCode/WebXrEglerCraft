@@ -18314,6 +18314,35 @@ __decorate12([
   property.float(0.9)
 ], OrbitalCamera.prototype, "damping", void 0);
 
+// js/CanvasRenderingContext2D.js
+var CanvasRenderingContext2D = class extends Component {
+  start() {
+    setTimeout(starter, 1e3);
+    function starter() {
+      const canvas2 = document.getElementsByTagName("canvas")[0];
+      canvas2.width = 300;
+      canvas2.height = 300;
+      const ctx = canvas2.getContext("2d");
+      this.canvasTexture = new Texture(this.engine, canvas2);
+      this.material.diffuseTexture = this.canvasTexture;
+      this.canvasTexture.update();
+    }
+    setInterval(updater, 100);
+    function updater() {
+      canvas = document.getElementsByTagName("canvas")[0];
+      this.canvasTexture.update();
+    }
+  }
+  update() {
+  }
+};
+__publicField(CanvasRenderingContext2D, "TypeName", "CanvasRenderingContext2D");
+__publicField(CanvasRenderingContext2D, "Properties", {
+  /* Set this material in the editor. The texture gets to applied to
+   * all objects using it. */
+  material: Property.material()
+});
+
 // js/index.js
 var Constants = {
   ProjectName: "VR",
@@ -18366,6 +18395,7 @@ engine.registerComponent(MouseLookComponent);
 engine.registerComponent(PlayerHeight);
 engine.registerComponent(TeleportComponent);
 engine.registerComponent(VrModeActiveSwitch);
+engine.registerComponent(CanvasRenderingContext2D);
 try {
   await engine.loadMainScene(`${Constants.ProjectName}.bin`);
 } catch (e) {
