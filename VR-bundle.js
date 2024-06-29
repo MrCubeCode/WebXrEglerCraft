@@ -18317,26 +18317,22 @@ __decorate12([
 // js/CanvasRenderingContext2D.js
 var CanvasRenderingContext2D = class extends Component {
   start() {
+    var engine2 = this.engine;
+    var dever = this.material.diffuseTexture;
+    var geneys;
     setTimeout(starter, 6e4);
     function starter() {
-      if (document.getElementsByTagName("canvas") != null) {
-        const canvas2 = document.getElementsByTagName("canvas")[0];
-        canvas2.width = 300;
-        canvas2.height = 300;
-        const ctx = canvas2.getContext("2d");
-        this.canvasTexture = new Texture(this.engine, canvas2);
-        this.material.diffuseTexture = this.canvasTexture;
-        setInterval(updater, 100);
-        this.canvasTexture.update();
-      } else {
-        setTimeout(starter, 1e3);
-      }
+      const canvas2 = document.getElementsByTagName("canvas")[0];
+      canvas2.width = 300;
+      canvas2.height = 300;
+      const ctx = canvas2.getContext("2d");
+      this.canvasTexture = new Texture(engine2, canvas2);
+      dever = this.canvasTexture;
+      geneys = this.canvasTexture;
+      setInterval(updateframe, 100);
     }
-    function updater() {
-      if (document.getElementsByTagName("canvas") != null) {
-        canvas = document.getElementsByTagName("canvas")[0];
-        this.canvasTexture.update();
-      }
+    function updateframe() {
+      geneys.update();
     }
   }
 };
