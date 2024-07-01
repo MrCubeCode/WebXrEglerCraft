@@ -8,7 +8,7 @@ function mode() {
   var g = document.createElement('canvas');
 g.setAttribute("id", "canvas");
   var sourceCanvas = document.getElementsByTagName('canvas')[0];
-  var sourceCanvas = destinationCanvas.getElementsId('canvas');
+  var destinationCanvas = destinationCanvas.getElementsId('canvas');
   let srcCtx = sourceCanvas.getContext('2d');
 let destCtx = destinationCanvas.getContext('2d');
 
