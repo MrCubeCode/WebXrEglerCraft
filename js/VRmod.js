@@ -6,7 +6,7 @@ function mode() {
 //  console.log("g");
  // document.getElementsByTagName('canvas')[0].setAttribute("id", "canvas");
   var g = document.createElement('canvas');
-g.setAttribute("id", "canvas");
+g.setAttribute("id", "canvas2");
   var sourceCanvas = document.getElementsByTagName('canvas')[0];
   var destinationCanvas = g;
   let srcCtx = sourceCanvas.getContext('2d');
