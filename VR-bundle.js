@@ -18322,7 +18322,7 @@ var CanvasRenderingContext2D = class extends Component {
     var geneys;
     setTimeout(starter, 5e3);
     function starter() {
-      const canvas2 = document.getElementsByTagName("canvas")[0];
+      const canvas2 = document.getElementsById("canvas");
       canvas2.width = 300;
       canvas2.height = 300;
       const ctx = canvas2.getContext("2d");
