@@ -2,9 +2,10 @@ setInterval(mode,100);
 function mode() {
 //  console.log("g");
  // document.getElementsByTagName('canvas')[0].setAttribute("id", "canvas");
-   document.createElement('canvas');
+  var g = document.createElement('canvas');
+g.setAttribute("id", "canvas2");
   var sourceCanvas = document.getElementsByTagName('canvas')[0];
-  var sourceCanvas = destinationCanvas.getElementsByTagName('canvas')[1];
+  var sourceCanvas = destinationCanvas.getElementsId('canvas2');
   let srcCtx = sourceCanvas.getContext('2d');
 let destCtx = destinationCanvas.getContext('2d');
 
