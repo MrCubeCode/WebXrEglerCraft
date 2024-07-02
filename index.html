@@ -27,7 +27,19 @@ window.__eaglercraftLoaderClient = {
 	
 </script>
 <script type="text/javascript" src="js/loader.js"></script>
-
+<style>
+ canvas { background: -webkit-canvas(squares); width:600px; height:600px; border:2px solid black }
+ </style>
+ <script type="application/x-javascript">
+	 setInterval(draw,100);
+function draw(w, h) {
+ var ctx = document.getCSSCanvasContext("2d", "squares", w, h);
+ ctx.fillStyle = "rgb(200,0,0)";
+ ctx.fillRect (10, 10, 55, 50);
+ ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+ ctx.fillRect (30, 30, 55, 50);
+}
+ </script>
     <meta charset="utf-8" />
    
     <meta name="theme-color" content="white">
