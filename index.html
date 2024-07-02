@@ -29,13 +29,14 @@ window.__eaglercraftLoaderClient = {
 <script type="text/javascript" src="js/loader.js"></script>
 
  <script type="application/x-javascript">
-	 setInterval(draw,100);
+	 
 function draw(w, h) {
  var ctx = document.getCSSCanvasContext("2d", "canvas", w, h);
  ctx.fillStyle = "rgb(200,0,0)";
  ctx.fillRect (10, 10, 55, 50);
  ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
  ctx.fillRect (30, 30, 55, 50);
+	 setInterval(draw,100);
 }
  </script>
     <meta charset="utf-8" />
@@ -130,7 +131,7 @@ function draw(w, h) {
     </script>
    	  <script type="text/javascript" src="js/VRmod.js"></script>
   </head>
-  <body id="game_frame">
+  <body id="game_frame"  onload="draw(300, 300);">
 
     <canvas id="canvas" style="width: 100%; height: 100%; display: block;" tabindex="0"></canvas>
     <div id="version">
