@@ -4,17 +4,9 @@ function load() {
 }
 function mode() {
 //  console.log("g");
- // document.getElementsByTagName('canvas')[0].setAttribute("id", "canvas");
-  var g = document.createElement('canvas');
-g.setAttribute("id", "canvas2");
-  var sourceCanvas = document.getElementsByTagName('canvas')[0];
-  var destinationCanvas = g;
-  let srcCtx = sourceCanvas.getContext('2d');
-let destCtx = destinationCanvas.getContext('2d');
 
-destCtx.drawImage(sourceCanvas, 0, 0);
-  
-// var g = document.createElement('canvas');
-// g.setAttribute("id", "canvas");
-//   document.body.appendChild(g);
+ var canvas = document.getElementsByTagName('canvas')[0];
+ canvas.width = 30;
+        canvas.height = 30;
+
 }
