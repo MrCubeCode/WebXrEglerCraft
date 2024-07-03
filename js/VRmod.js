@@ -1,6 +1,6 @@
 setTimeout(load,60000);
 function load() {
-//setInterval(mode,100);
+ requestAnimationFrame(mode);
 }
 function mode() {
 //  console.log("g");
