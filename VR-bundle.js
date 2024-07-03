@@ -18322,20 +18322,17 @@ var CanvasRenderingContext2D = class extends Component {
     var geneys;
     setTimeout(starter, 5e3);
     function starter() {
-      const canvas2 = document.getElementsById("canvas");
-      canvas2.width = 300;
-      canvas2.height = 300;
-      const ctx = canvas2.getContext("2d");
+      const canvas2 = document.getElementById("canvas2");
       this.canvasTexture = new Texture(engine2, canvas2);
       dever = this.canvasTexture;
       geneys = this.canvasTexture;
       setInterval(updateframe, 100);
     }
     function updateframe() {
-      const canvas2 = document.getElementsByTagName("canvas")[0];
+      const canvas2 = document.getElementById("canvas2");
       geneys = new Texture(engine2, canvas2);
       dever = this.canvasTexture;
-      geneys.update();
+      geneys.update(100, 100);
     }
   }
 };
