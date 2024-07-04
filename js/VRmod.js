@@ -1,4 +1,4 @@
-setTimeout(load,60000);
+setTimeout(load,100);
 function load() {
  requestAnimationFrame(mode);
 }
