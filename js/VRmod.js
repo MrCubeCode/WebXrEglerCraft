@@ -1,6 +1,7 @@
 setTimeout(load,100);
+setInterval(mode,100);
 function load() {
- setInterval(mode,100)
+ 
 }
 function mode() {
   console.log("g");
