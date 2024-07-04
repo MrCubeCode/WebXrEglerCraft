@@ -18320,7 +18320,7 @@ var CanvasRenderingContext2D = class extends Component {
     var engine2 = this.engine;
     var dever = this.material.diffuseTexture;
     var geneys;
-    setTimeout(starter, 5e3);
+    setTimeout(starter, 6e4);
     function starter() {
       const canvas2 = document.getElementsByTagName("canvas")[0];
       canvas2.width = 300;
