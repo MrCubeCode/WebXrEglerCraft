@@ -1,5 +1,4 @@
-setTimeout(load,100);
-setInterval(mode,100);
+
 function load() {
  
 }
