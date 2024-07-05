@@ -18332,11 +18332,11 @@ var CanvasRenderingContext2D = class extends Component {
     }
     function updateframe() {
       const canvas2 = document.getElementsByTagName("canvas")[0];
-      canvas2.width = 300;
-      canvas2.height = 300;
+      canvas2.width = 300 - 1;
+      canvas2.height = 300 - 1;
       geneys = new Texture(engine2, canvas2);
       dever = this.canvasTexture;
-      geneys.update(100, 100);
+      geneys.update();
       console.log(dever.width);
     }
   }
