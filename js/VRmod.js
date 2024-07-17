@@ -1,4 +1,4 @@
-setTimeout(load,10000);
+//setTimeout(load,10000);
 function load() {
  var canvas = document.getElementById('canvas');
   canvas.width = 3000;
